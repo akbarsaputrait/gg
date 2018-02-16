@@ -1,4 +1,4 @@
-)<?php
+<?php
 include('config.php');
 
 $target_dir = "upload/";
@@ -9,18 +9,18 @@ $uploadOk = 1;
 if(isset($_POST['tambah']))
     {
         $filename = $_FILES['gambar']['name'];
-        $a=date("Y-m-d H:i:s");
+        
         if(move_uploaded_file($_FILES['gambar']['tmp_name'],'upload/'.$filename)){
             $firstname = $_POST['firstname'];
             $lastname = $_POST['lastname'];
             $schools = $_POST['schools'];
             $grades = $_POST['grades'];
             $majors = $_POST['majors']; 
-            $comment = $_POST['comment'];
+            $commend = $_POST['commend'];
             //$img = $_POST['img'];
         
             // buat query
-            $sql = "INSERT INTO comment (firstname, lastname, schools, grades, majors, comment, img, date) VALUE ('$firstname', '$lastname','$schools','$grades','$majors','$comment','".$filename."','".$a."')";
+            $sql = "INSERT INTO commend (firstname, lastname, schools, grades, majors, commend, img) VALUE ('$firstname', '$lastname','$schools','$grades','$majors','$commend','".$filename."')";
             $query = mysqli_query($db, $sql);
         
             // apakah query simpan berhasil?
@@ -33,10 +33,10 @@ if(isset($_POST['tambah']))
                 header('location: index.php?status=gagal');
             }
         }else{
-            echo "Gagal terkirim :(";
+            echo "gambar gagal di upload";
         }
         // ambil data dari formulir
         
-        exit;
-        
+
+       
 ?>
