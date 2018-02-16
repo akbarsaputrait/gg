@@ -30,6 +30,7 @@ include 'config.php';
                 z-index: 100;
                 position: fixed;
                 width: 100%;
+                transition: all 1s;
             }
 
             ul {
@@ -68,7 +69,6 @@ include 'config.php';
 
         <!-- START HOME -->
         <div class="ui center aligned" style="height:100%" id="home">
-
             <nav id="navbar">
                 <ul>
                     <li>
@@ -120,7 +120,7 @@ include 'config.php';
                 <h1 class="ui header" style="color:white; padding-top:1.5em;">My Experience</h1>
             </div>
             <div class="ui container" style="padding-top:2em; padding-bottom:em;">
-                <div class="ui active large progress" data-tooltip="PHP" data-position="top center">
+                <div class="ui purple active large progress" data-tooltip="PHP" data-position="top center">
                     <div class="bar" style="width:80%;"></div>
                 </div>
                 <div class="ui orange active large progress" data-tooltip="HTML" data-position="top center">
