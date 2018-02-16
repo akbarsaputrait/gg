@@ -120,7 +120,7 @@ include 'config.php';
                 <h1 class="ui header" style="color:white; padding-top:1.5em;">My Experience</h1>
             </div>
             <div class="ui container" style="padding-top:2em; padding-bottom:em;">
-                <div class="ui active large progress" style="background: #9477d8;" data-tooltip="PHP" data-position="top center">
+                <div class="ui active large progress" data-tooltip="PHP" data-position="top center">
                     <div class="bar" style="width:80%;"></div>
                 </div>
                 <div class="ui orange active large progress" data-tooltip="HTML" data-position="top center">
@@ -128,9 +128,6 @@ include 'config.php';
                 </div>
                 <div class="ui blue active large progress" data-tooltip="CSS" data-position="top center">
                     <div class="bar" style="width:65%;"></div>
-                </div>
-                <div class="ui purple active large progress" data-tooltip="Bootstrap" data-position="top center">
-                    <div class="bar" style="width:45%;"></div>
                 </div>
                 <div class="ui yellow active large progress" data-tooltip="Photography" data-position="top center">
                     <div class="bar" style="width:70%;"></div>
