@@ -50,8 +50,9 @@ include 'config.php';
                 text-align: center;
                 padding: 14px 16px;
                 text-decoration: none;
-                -webkit-transition-duration:0.25s;
+                -webkit-transition-duration: 0.25s;
             }
+
             /* Change the link color to #111 (black) on hover */
 
             li a:hover {
@@ -59,23 +60,32 @@ include 'config.php';
                 background-color: #fff;
                 color: black;
             }
-
         </style>
 
     </head>
 
-    <body class="pushable">
+    <body>
 
         <!-- START HOME -->
         <div class="ui center aligned" style="height:100%" id="home">
 
             <nav id="navbar">
                 <ul>
-                    <li><a class="item" href="#home">Home</a></li>
-                    <li><a class="item" href="#about">About</a></li>
-                    <li><a class="item" href="#experience">Experience</a></li>
-                    <li><a class="item" href="#commend">Commend Me</a></li>
-                    <li><a class="item" href="#see-commend">See your commend</a></li>
+                    <li>
+                        <a class="item" href="#home">Home</a>
+                    </li>
+                    <li>
+                        <a class="item" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="item" href="#experience">Experience</a>
+                    </li>
+                    <li>
+                        <a class="item" href="#commend">Commend Me</a>
+                    </li>
+                    <li>
+                        <a class="item" href="#see-commend">See your commend</a>
+                    </li>
                 </ul>
             </nav>
             <div class="ui container">
@@ -105,11 +115,14 @@ include 'config.php';
         <!-- END ABOUT -->
 
         <!-- START EXPERIENCE -->
-        <div id="experience" style="height:100%;">
+        <div id="experience" style="height:100%; background:#545454">
             <div class="ui text container center aligned">
                 <h1 class="ui header" style="color:white; padding-top:1.5em;">My Experience</h1>
             </div>
             <div class="ui container" style="padding-top:2em; padding-bottom:em;">
+                <div class="ui active large progress" style="background: #9477d8;" data-tooltip="PHP" data-position="top center">
+                    <div class="bar" style="width:80%;"></div>
+                </div>
                 <div class="ui orange active large progress" data-tooltip="HTML" data-position="top center">
                     <div class="bar" style="width:75%;"></div>
                 </div>
@@ -118,12 +131,6 @@ include 'config.php';
                 </div>
                 <div class="ui purple active large progress" data-tooltip="Bootstrap" data-position="top center">
                     <div class="bar" style="width:45%;"></div>
-                </div>
-                <div class="ui blue active large progress" data-tooltip="Visual Basic" data-position="top center">
-                    <div class="bar" style="width:50%;"></div>
-                </div>
-                <div class="ui green active large progress" data-tooltip="C++" data-position="top center">
-                    <div class="bar" style="width:50%;"></div>
                 </div>
                 <div class="ui yellow active large progress" data-tooltip="Photography" data-position="top center">
                     <div class="bar" style="width:70%;"></div>
@@ -184,7 +191,6 @@ include 'config.php';
             </div>
             <!-- END COMMEND BOX -->
 
-
             <!-- START SEE COMMEND -->
             <div id='see-commend' style="padding-bottom: 2em; background-color:#1d1c1b; color:white;">
                 <div class="ui text container">
@@ -203,11 +209,13 @@ include 'config.php';
                                     </div>
                                     <div class="field">
                                         <b>
-                                    <!-- PHOTO PROFILE -->
-                                    <?php echo $commend['firstname']." ".$commend['lastname'];?><br/>
-                                    <?php echo $commend['schools'];?><br/>
-                                    <?php echo $commend['grades']." ".$commend['majors'];?>
-                                    </b>
+                                            <!-- PHOTO PROFILE -->
+                                            <?php echo $commend['firstname']." ".$commend['lastname'];?>
+                                            <br/>
+                                            <?php echo $commend['schools'];?>
+                                            <br/>
+                                            <?php echo $commend['grades']." ".$commend['majors'];?>
+                                        </b>
                                     </div>
 
                                     <div class="field">
@@ -215,7 +223,8 @@ include 'config.php';
                                     </div>
                                 </div>
 
-                            </div><br>
+                            </div>
+                            <br>
                         </form>
 
                         <?php
